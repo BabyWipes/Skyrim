@@ -1,0 +1,30 @@
+name: Skyrim
+main: me.HugoDaBosss.skyrim.Skyrim
+version: 0.5
+depends: WorldGuard
+commands:
+   money:
+      description: Money related stuff
+      usage: /gold [player]
+      aliases: [gold, bal, g]
+   shouts:
+      description: Shouts related stuff
+      usage: /shouts unlock|lock <shout> <player>
+   shop:
+      description: Shop related stuff
+      usage: /shop
+   spawn:
+      description: Spawn related stuff
+      usage: /spawn
+   location:
+      description: Location related stuff
+      usage: /location <name>
+   gm:
+      description: Gamemode related stuff
+      usage: /gm <0|1|2>
+   rename:
+      description: Rename related stuff
+      usage: /rename <name|lore> <string>
+   user:
+      description: User related stuff
+      usage: /user rank <rank> <user>
