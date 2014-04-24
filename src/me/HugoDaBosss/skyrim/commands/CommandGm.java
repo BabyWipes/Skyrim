@@ -1,22 +1,16 @@
 package me.HugoDaBosss.skyrim.commands;
 
+import me.HugoDaBosss.skyrim.Skyrim;
 import me.HugoDaBosss.skyrim.Users.Rank;
 import me.HugoDaBosss.skyrim.util.RankUtils;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
-public class CommandGm extends SkyrimCommand
+public class CommandGm implements org.bukkit.command.CommandExecutor
 {
 
-	public CommandGm(Plugin plugin, me.HugoDaBosss.skyrim.Skyrim skyrim) {
-		super(plugin, skyrim);
-		// TODO Auto-generated constructor stub
-	}
-	
-	@SuppressWarnings("static-access")
 	@Override
 	public boolean onCommand(org.bukkit.command.CommandSender sender, org.bukkit.command.Command cmd, String label, String[] args) 
 	{

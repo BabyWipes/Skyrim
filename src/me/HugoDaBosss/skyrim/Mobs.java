@@ -1,7 +1,6 @@
 package me.HugoDaBosss.skyrim;
 
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Random;
 
 import me.HugoDaBosss.skyrim.util.Locations;
@@ -247,86 +246,6 @@ public class Mobs {
 				{
 					Mobs.spawnWolf(Skyrim.getRandomLocation());
 				}
-				//OLD
-				/*
-				ArrayList<Zombie> newzs = new ArrayList<Zombie>();
-				for(Zombie z : zs)
-				{
-					if(z != null && !z.isDead())
-					{
-						newzs.add(z);
-					}
-				}
-				zs = newzs;
-				ArrayList<Skeleton> newss = new ArrayList<Skeleton>();
-				for(Skeleton s : ss)
-				{
-					if(s != null && !s.isDead())
-					{
-						newss.add(s);
-					}
-				}
-				ss = newss;
-				int mobs = ss.size() + zs.size();
-				int should = (Bukkit.getOnlinePlayers().length * 5) + 30;
-				int dif = should - mobs;
-				if(mobs < should)
-				{
-					Random r = new Random();
-					for(int i = 0; i < dif; i++)
-					{
-						if(r.nextBoolean())
-							Mobs.spawnZombie(Skyrim.getRandomLocation());
-						else
-							Mobs.spawnSkeleton(Skyrim.getRandomLocation());
-					}
-				}
-				//Skyrim.getPlugin().getLogger().info("There should be " + should + ", there were " + mobs + " and there were " + dif + " spawned!");
-				ArrayList<Wolf> newws = new ArrayList<Wolf>();
-				for(Wolf w : ws)
-				{
-					if(w != null && !w.isDead())
-					{
-						newws.add(w);
-					}
-				}
-				ws = newws;
-				mobs = ws.size();
-				should = 5;
-				dif = should - mobs;
-				if(mobs < should)
-				{
-					for(int i = 0; i < dif; i++)
-					{
-						Mobs.spawnWolf(Skyrim.getRandomLocation());
-					}
-				}
-				//HORSES
-				ArrayList<Horse> newhs = new ArrayList<Horse>();
-				for(Horse s : hs)
-				{
-					if(s != null && !s.isDead())
-					{
-						newhs.add(s);
-					}
-					Block b = s.getLocation().getBlock();
-					if(b.getType() == Material.STATIONARY_WATER || b.getType() == Material.WATER)
-					{
-						s.damage(10.0);
-					}
-				}
-				hs = newhs;
-				mobs = hs.size();
-				should = 2;
-				dif = should - mobs;
-				if(mobs < should)
-				{
-					for(int i = 0; i < dif; i++)
-					{
-						Mobs.spawnHorse(horse);
-					}
-				}
-				//Skyrim.getPlugin().getLogger().info("There should be " + should + ", there were " + mobs + " and there were " + dif + " spawned!");*/
 			}
 			
 		}.runTaskTimer(Skyrim.getPlugin(), 100L, 100L);
@@ -363,6 +282,8 @@ public class Mobs {
 				}
 			}
 		}.runTaskTimer(Skyrim.getPlugin(), 50L, 50L);
+		
+		/*
 		new BukkitRunnable()
 		{
 
@@ -372,113 +293,13 @@ public class Mobs {
 				{
 					if(!Mobs.isDragon())
 					{
-						//Mobs.spawnDragon(Locations.getLocation("dragon"));
+						Mobs.spawnDragon(Locations.getLocation("dragon"));
 					}
 				}
 			}
 			
 		}.runTaskTimer(Skyrim.getPlugin(), 1000L, 1000L);
-	}
-	
-	/*zs = new ArrayList<Zombie>();
-	ss = new ArrayList<Skeleton>();
-	hs = new ArrayList<Horse>();
-	ws = new ArrayList<Wolf>();
-	zombies = new ArrayList<Integer>();*/
-	//private static Location horse;
-	
-	@Deprecated
-	public static void startTask_OLD()
-	{
-		new BukkitRunnable()
-		{
-
-			@Override
-			public void run() {
-				/*
-				Random r = new Random();
-				ArrayList<Zombie> newzs = new ArrayList<Zombie>();
-				for(Zombie z : zs)
-				{
-					if(z != null && !z.isDead())
-					{
-						newzs.add(z);
-					}
-				}
-				zs = newzs;
-				ArrayList<Skeleton> newss = new ArrayList<Skeleton>();
-				for(Skeleton s : ss)
-				{
-					if(s != null && !s.isDead())
-					{
-						newss.add(s);
-					}
-				}
-				ss = newss;
-				int mobs = ss.size() + zs.size();
-				int should = (Bukkit.getOnlinePlayers().length * 5) + 30;
-				int dif = should - mobs;
-				if(mobs < should)
-				{
-					Random r = new Random();
-					for(int i = 0; i < dif; i++)
-					{
-						if(r.nextBoolean())
-							Mobs.spawnZombie(Skyrim.getRandomLocation());
-						else
-							Mobs.spawnSkeleton(Skyrim.getRandomLocation());
-					}
-				}
-				Skyrim.getPlugin().getLogger().info("There should be " + should + ", there were " + mobs + " and there were " + dif + " spawned!");
-				ArrayList<Wolf> newws = new ArrayList<Wolf>();
-				for(Wolf w : ws)
-				{
-					if(w != null && !w.isDead())
-					{
-						newws.add(w);
-					}
-				}
-				ws = newws;
-				mobs = ws.size();
-				should = 5;
-				dif = should - mobs;
-				if(mobs < should)
-				{
-					for(int i = 0; i < dif; i++)
-					{
-						Mobs.spawnWolf(Skyrim.getRandomLocation());
-					}
-				}
-				//HORSES
-				ArrayList<Horse> newhs = new ArrayList<Horse>();
-				for(Horse s : hs)
-				{
-					if(s != null && !s.isDead())
-					{
-						newhs.add(s);
-					}
-					Block b = s.getLocation().getBlock();
-					if(b.getType() == Material.STATIONARY_WATER || b.getType() == Material.WATER)
-					{
-						s.damage(10.0);
-					}
-				}
-				hs = newhs;
-				mobs = hs.size();
-				should = 2;
-				dif = should - mobs;
-				if(mobs < should)
-				{
-					for(int i = 0; i < dif; i++)
-					{
-						Mobs.spawnHorse(horse);
-					}
-				}
-				Skyrim.getPlugin().getLogger().info("There should be " + should + ", there were " + mobs + " and there were " + dif + " spawned!");
-				*/
-			}
-			
-		}.runTaskTimer(Skyrim.getPlugin(), 100L, 100L);
+		*/
 	}
 
 }

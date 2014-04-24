@@ -21,7 +21,7 @@ public class DragonEscape extends Shout
 
 	public DragonEscape() 
 	{
-		this.word1 = "Drun";
+		this.word1 = "Diin";
 		this.word2 = "Feim";
 		this.word3 = "Dovah";
 		this.sound = Sound.GHAST_FIREBALL;

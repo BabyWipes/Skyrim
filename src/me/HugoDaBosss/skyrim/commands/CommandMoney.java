@@ -1,5 +1,6 @@
 package me.HugoDaBosss.skyrim.commands;
 
+import me.HugoDaBosss.skyrim.Skyrim;
 import me.HugoDaBosss.skyrim.User;
 import me.HugoDaBosss.skyrim.Users.Rank;
 import me.HugoDaBosss.skyrim.util.RankUtils;
@@ -8,16 +9,10 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
-public class CommandMoney extends SkyrimCommand
+public class CommandMoney implements org.bukkit.command.CommandExecutor
 {
 
-	public CommandMoney(Plugin plugin, me.HugoDaBosss.skyrim.Skyrim skyrim) {
-		super(plugin, skyrim);
-	}
-	
-	@SuppressWarnings("static-access")
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) 
 	{

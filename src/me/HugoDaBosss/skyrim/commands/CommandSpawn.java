@@ -2,6 +2,7 @@ package me.HugoDaBosss.skyrim.commands;
 
 import java.util.ArrayList;
 
+import me.HugoDaBosss.skyrim.Skyrim;
 import me.HugoDaBosss.skyrim.util.Locations;
 import me.HugoDaBosss.skyrim.util.Locations.Names;
 import me.HugoDaBosss.skyrim.util.RegionUtils;
@@ -10,13 +11,12 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.Plugin;
 
-public class CommandSpawn extends SkyrimCommand
+public class CommandSpawn implements org.bukkit.command.CommandExecutor
 {
 
-	public CommandSpawn(Plugin plugin, me.HugoDaBosss.skyrim.Skyrim skyrim) {
-		super(plugin, skyrim);
+	public CommandSpawn()
+	{
 		players = new ArrayList<String>();
 	}
 
@@ -59,7 +59,6 @@ public class CommandSpawn extends SkyrimCommand
 				double x = 0;
 				double z = 0;
 				
-				@SuppressWarnings("static-access")
 				@Override
 				public void run() {
 					left -= 20;

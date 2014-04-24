@@ -10,10 +10,10 @@ import org.bukkit.World;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.LivingEntity;
 
-public class FirePath extends Shout
+public class FireCircle extends Shout
 {
 
-	public FirePath() 
+	public FireCircle() 
 	{
 		this.word1 = "Su";//TODO CHANGE WORDS//TODO CHANGE WORDS//TODO CHANGE WORDS//TODO CHANGE WORDS
 		this.word2 = "Yol";//TODO CHANGE WORDS//TODO CHANGE WORDS//TODO CHANGE WORDS//TODO CHANGE WORDS

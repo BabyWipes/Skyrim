@@ -13,15 +13,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.plugin.Plugin;
 
-public class CommandRename extends SkyrimCommand 
+public class CommandRename implements org.bukkit.command.CommandExecutor
 {
-
-	public CommandRename(Plugin plugin, me.HugoDaBosss.skyrim.Skyrim skyrim) {
-		super(plugin, skyrim);
-		// TODO Auto-generated constructor stub
-	}
 	
 	@SuppressWarnings("deprecation")
 	@Override
