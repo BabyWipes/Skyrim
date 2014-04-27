@@ -93,7 +93,7 @@ public class Mobs {
 		{
 			ItemStack lhelmet = new ItemStack(Material.LEATHER_HELMET, 1);
 			LeatherArmorMeta lam = (LeatherArmorMeta)lhelmet.getItemMeta();
-			lam.setColor(Color.fromRGB(220, 220, 45));
+			lam.setColor(Color.fromRGB(66, 55, 22));
 			lam.setDisplayName("gold");
 			lhelmet.setItemMeta(lam);
 			z.getEquipment().setHelmet(lhelmet);
@@ -102,7 +102,7 @@ public class Mobs {
 		{
 			ItemStack lhelmet = new ItemStack(Material.LEATHER_HELMET, 1);
 			LeatherArmorMeta lam = (LeatherArmorMeta)lhelmet.getItemMeta();
-			lam.setColor(Color.fromRGB(150, 50, 200));
+			lam.setColor(Color.fromRGB(55, 33, 33));
 			lam.setDisplayName("mana");
 			lhelmet.setItemMeta(lam);
 			z.getEquipment().setHelmet(lhelmet);
@@ -137,7 +137,7 @@ public class Mobs {
 		{
 			ItemStack lhelmet = new ItemStack(Material.LEATHER_HELMET, 1);
 			LeatherArmorMeta lam = (LeatherArmorMeta)lhelmet.getItemMeta();
-			lam.setColor(Color.fromRGB(220, 220, 45));
+			lam.setColor(Color.fromRGB(66, 55, 22));
 			lam.setDisplayName("gold");
 			lhelmet.setItemMeta(lam);
 			s.getEquipment().setHelmet(lhelmet);
@@ -146,7 +146,7 @@ public class Mobs {
 		{
 			ItemStack lhelmet = new ItemStack(Material.LEATHER_HELMET, 1);
 			LeatherArmorMeta lam = (LeatherArmorMeta)lhelmet.getItemMeta();
-			lam.setColor(Color.fromRGB(150, 50, 200));
+			lam.setColor(Color.fromRGB(55, 33, 33));
 			lam.setDisplayName("mana");
 			lhelmet.setItemMeta(lam);
 			s.getEquipment().setHelmet(lhelmet);

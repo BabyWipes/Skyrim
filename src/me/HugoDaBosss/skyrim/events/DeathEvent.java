@@ -146,18 +146,18 @@ public class DeathEvent implements org.bukkit.event.Listener
 				p.setItemInHand(p.getItemInHand());
 			}
 			String a = z.getEquipment().getHelmet().getItemMeta().getDisplayName();
-			Skyrim.info(z.getEquipment().getHelmet().getItemMeta().getDisplayName());
+			//Skyrim.info(z.getEquipment().getHelmet().getItemMeta().getDisplayName());
 			if(a != null)
 			{
 				if(a.equalsIgnoreCase("gold"))
 				{
-					int i = new Random().nextInt(9) + 1;
+					int i = (new Random().nextInt(9)) + 1;
 					p.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "You found " + ChatColor.YELLOW + ChatColor.BOLD + i + "g" + ChatColor.RESET + ChatColor.GRAY + ChatColor.ITALIC + " in the " + ChatColor.RESET + ChatColor.WHITE + ChatColor.BOLD + name);
 					u.addMoney(i);
 				}
 				else if(a.equalsIgnoreCase("mana"))
 				{
-					int i = new Random().nextInt(20) + 1;
+					int i = (new Random().nextInt(20)) + 1;
 					p.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "You took " + ChatColor.DARK_PURPLE + ChatColor.BOLD + i + " mana" + ChatColor.RESET + ChatColor.GRAY + ChatColor.ITALIC + " from the " + ChatColor.RESET + ChatColor.WHITE + ChatColor.BOLD + name);
 					u.addMana(i);
 				}
@@ -199,13 +199,13 @@ public class DeathEvent implements org.bukkit.event.Listener
 			{
 				if(a.equalsIgnoreCase("gold"))
 				{
-					int i = new Random().nextInt(9) + 1;
+					int i = (new Random().nextInt(9)) + 1;
 					p.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "You found " + ChatColor.YELLOW + ChatColor.BOLD + i + "g" + ChatColor.RESET + ChatColor.GRAY + ChatColor.ITALIC + " in the " + ChatColor.RESET + ChatColor.WHITE + ChatColor.BOLD + name);
 					u.addMoney(i);
 				}
 				else if(a.equalsIgnoreCase("mana"))
 				{
-					int i = new Random().nextInt(20) + 1;
+					int i = (new Random().nextInt(20)) + 1;
 					p.sendMessage(ChatColor.GRAY + "" + ChatColor.ITALIC + "You took " + ChatColor.DARK_PURPLE + ChatColor.BOLD + i + " mana" + ChatColor.RESET + ChatColor.GRAY + ChatColor.ITALIC + " from the " + ChatColor.RESET + ChatColor.WHITE + ChatColor.BOLD + name);
 					u.addMana(i);
 				}

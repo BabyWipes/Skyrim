@@ -40,6 +40,6 @@ public class ChatEvent implements org.bukkit.event.Listener
 		{
 			msg.sendToPlayer(p);
 		}
-		Bukkit.getLogger().info(player + "> " + ChatColor.translateAlternateColorCodes('&',e.getMessage()));
+		Bukkit.getLogger().info(r.getBukkitColor() + player + ChatColor.RESET + ": " + ChatColor.getByChar(r.getChatColor().getColorCode()) +  ChatColor.translateAlternateColorCodes('&',e.getMessage()));
 	}
 }

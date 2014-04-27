@@ -2,6 +2,8 @@ package me.HugoDaBosss.skyrim.events;
 
 import net.minecraft.server.v1_7_R3.EntityComplexPart;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.EnderDragon;
 import org.bukkit.entity.Player;
@@ -57,4 +59,13 @@ public class MiscEvent implements org.bukkit.event.Listener
 			e.setCancelled(true);
 		}
 	}
+	
+	@EventHandler
+	public void ping(org.bukkit.event.server.ServerListPingEvent e)
+	{
+		e.setMotd(ChatColor.BLUE + "" +  ChatColor.BOLD + "<< " + ChatColor.DARK_GRAY + ChatColor.UNDERLINE + "Empyrim" + ChatColor.BLUE + ChatColor.BOLD + " >>"
+				+ ChatColor.GRAY + "  A Skyrim-like Minecraft Experience\n" 
+				+ ChatColor.RESET + "                                            (mc.empyrim.net)");
+	}
+	
 }

@@ -34,7 +34,6 @@ public class FireCircle extends Shout
 			        double angle = i * Math.PI / 180;
 			            x = (int)(loc.getX() + r * Math.cos(angle));
 			            z = (int)(loc.getZ() + r * Math.sin(angle));
-			     
 			            //this.getServer().getWorld("world").getBlockAt(x, y, z).setType(m);
 			        }
 			}
