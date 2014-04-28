@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.Random;
 
 import me.HugoDaBosss.skyrim.Users.Rank;
+import me.HugoDaBosss.skyrim.commands.CommandGc;
 import me.HugoDaBosss.skyrim.commands.CommandGm;
 import me.HugoDaBosss.skyrim.commands.CommandLocation;
 import me.HugoDaBosss.skyrim.commands.CommandMoney;
@@ -27,6 +28,7 @@ import me.HugoDaBosss.skyrim.shops.Shops;
 import me.HugoDaBosss.skyrim.shouts.ShoutType;
 import me.HugoDaBosss.skyrim.util.BossBar;
 import me.HugoDaBosss.skyrim.util.Items;
+import me.HugoDaBosss.skyrim.util.Lag;
 import me.HugoDaBosss.skyrim.util.Locations;
 import me.HugoDaBosss.skyrim.util.RandomLocation;
 import me.HugoDaBosss.skyrim.util.RankUtils;
@@ -151,6 +153,7 @@ public class Skyrim extends org.bukkit.plugin.java.JavaPlugin implements org.buk
 		this.getCommand("gm").setExecutor(new CommandGm());
 		this.getCommand("rename").setExecutor(new CommandRename());
 		this.getCommand("user").setExecutor(new CommandUser());
+		this.getCommand("gc").setExecutor(new CommandGc());
 		Calendar cal = Calendar.getInstance();
 		long now = cal.getTimeInMillis();
 		int time = Calendar.getInstance().get(Calendar.HOUR_OF_DAY);
@@ -196,6 +199,7 @@ public class Skyrim extends org.bukkit.plugin.java.JavaPlugin implements org.buk
 			}
 			
 		}.runTaskTimer(this, ticks, 72000L);
+		Bukkit.getServer().getScheduler().scheduleSyncRepeatingTask(this, new Lag(), 100L, 1L);
 	}
 	
 	public Skyrim()

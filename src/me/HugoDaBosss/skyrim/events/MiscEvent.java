@@ -2,7 +2,6 @@ package me.HugoDaBosss.skyrim.events;
 
 import net.minecraft.server.v1_7_R3.EntityComplexPart;
 
-import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
 import org.bukkit.entity.EnderDragon;
